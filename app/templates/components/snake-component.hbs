@@ -1,0 +1,10 @@
+<div class="emberEasterEgg" {{bind-attr style="easterEggStyle"}}>
+    {{#each block in level}}
+           <div {{ bind-attr class=":gameBlock block.class" }}></div>
+    {{/each}}
+    <div class="emberEasterEggScore">
+        {{ gameStatus }}
+    </div>
+</div>
+
+{{yield}}

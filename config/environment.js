@@ -4,6 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'snake-client',
     environment: environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' 172.30.180.227:4321 ws://172.30.180.227:4321",
+      'style-src': "'self' 'unsafe-inline' use.typekit.net"
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -21,10 +25,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
@@ -42,6 +46,8 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+  ENV.EXTEND_PROTOTYPE = true;
 
   return ENV;
 };

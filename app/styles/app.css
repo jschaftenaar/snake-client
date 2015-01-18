@@ -1,3 +1,53 @@
 html, body {
-  margin: 20px;
+    margin: 20px;
+}
+
+#title {
+    text-align: center;
+}
+
+.emberEasterEgg {
+    margin:0px auto;
+    background-color: #bbb;
+    display: block;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.emberEasterEgg .gameBlock {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    display: block;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+    font-family: arial;
+    vertical-align: middle;
+    font-size: 9px;
+}
+
+.emberEasterEgg .snakeBlock {
+    background-color: #ff0000;
+}
+
+.emberEasterEgg .floorBlock {
+
+}
+
+.emberEasterEgg .peanutBlock {
+    background-color: #6f992a;
+}
+
+.emberEasterEggScore {
+    position: relative;
+    top: -20px;
+    text-align: right;
+    color: #808080;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;;
 }
